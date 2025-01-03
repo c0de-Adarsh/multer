@@ -10,13 +10,19 @@ const studentsSchema = new mongoose.Schema({
         required:true,
         unique:true
     },
-    password:{
+    address:{
         type:String,
         
-    }
+    },
+    phone:{
+        type:String
+    },
+    photo:{
+        type:String
+    }//store  based 64 encoded data 
     
 })
 
-const Student  = mongoose.model('studentsSchema')
+const Student  = mongoose.model('Student',studentsSchema)
 
 module.exports = Student
